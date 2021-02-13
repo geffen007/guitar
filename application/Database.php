@@ -20,22 +20,13 @@ class Database {
         }
     }
 
-    //distrugge l'oggetto
-    public function __desctruct() {
-        $this->close();
-    }
+
 
     public function real_escape_string($value) {
         return $this->mysqli->real_escape_string($value);
     }
 
-    //Termina l'oggetto connessione
-    public function close() {
-        if ($this->mysqli)
-            $this->mysqli->close();
 
-        $this->mysqli = FALSE;
-    }
 
     //Esegue la SELECT e restituiisce l'array di oggetti che rappresentano il db
     public function GetQuery($sql) {
@@ -92,44 +83,6 @@ class Database {
         }
     }
 
-    public function sortArrayObject($arrayObject, $on, $order = SORT_ASC) {
-        if ($on == "")
-            return $arrayObject;
-
-        $new_arrayObject = array();
-        $sortable_array = array();
-
-        if (count($arrayObject) > 0) {
-            foreach ($arrayObject as $k => $v) {
-                if (is_array($v)) {
-                    foreach ($v as $k2 => $v2) {
-                        if ($k2 == $on) {
-                            $sortable_array[$k] = $v2;
-                        }
-                    }
-                } else {
-                    $sortable_array[$k] = $v;
-                }
-            }
-            switch ($order) {
-                case SORT_ASC:
-                    asort($sortable_array);
-                    break;
-                case SORT_DESC:
-                    arsort($sortable_array);
-                    break;
-            }
-
-            foreach ($sortable_array as $k => $v) {
-                $new_arrayObject[$k] = $arrayObject[$k];
-            }
-        }
-        return $new_arrayObject;
-    }
-
-    public function FetchArray($result) {
-        return $result->fetch_array(MYSQLI_ASSOC);
-    }
 
     public function FetchObject($result) {
         return $result->fetch_object();
@@ -145,15 +98,6 @@ class Database {
         }
     }
 
-    function mysqli_clean_connection($dbc) {
-        while (mysqli_more_results($dbc->mysqli)) {
-            if (mysqli_next_result($dbc->mysqli)) {
-                $result = mysqli_use_result($dbc->mysqli);
-                if ($result)
-                    mysqli_free_result($result);
-            }
-        }
-    }
 
     public function GetLastError() {
         return $this->mysqli->error;
