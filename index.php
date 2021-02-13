@@ -4,7 +4,7 @@ $libJS = '<script src="http://code.createjs.com/createjs-2013.09.25.min.js"></sc
 $scriptJS = '<script src=js/guitar.js></script>';
 $scriptJS2 = '';
 
-require_once $_SERVER["DOCUMENT_ROOT"] . '/APP2/partials/headers.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . '/guitar/partials/headers.php';
 ?>
 
 <div class="container main">
@@ -42,5 +42,5 @@ require_once $_SERVER["DOCUMENT_ROOT"] . '/APP2/partials/headers.php';
 </div>
 
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"] . '/APP2/partials/footer.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . '/guitar/partials/footer.php';
 ?>

@@ -1,4 +1,4 @@
-<script src="/APP2/js/app.js"></script>
+<script src="/guitar/js/app.js"></script>
 <?php echo $scriptJS ?>
 <?php echo $scriptJS2 ?>
   

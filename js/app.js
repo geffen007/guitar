@@ -83,7 +83,7 @@ function sendTab(tab, name){
   params_data.append('tablature', tab);
   params_data.append('nome', name)
   $.ajax({
-    'url': '/app2/php/save.php',
+    'url': '/guitar/php/save.php',
     'cache': false,
     'contentType': false,
     'processData': false,
@@ -100,7 +100,7 @@ function sendTab(tab, name){
 
 // redirect alla pagina mie composizioni
 function rediSave(){
-  location.replace("/APP2/views/mycompositions.php");
+  location.replace("/guitar/views/mycompositions.php");
 };
 
 

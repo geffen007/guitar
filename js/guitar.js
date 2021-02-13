@@ -45,7 +45,7 @@ $( document ).ready(function() {
 
 
 
-  createjs.Sound.registerManifest(notes, "/APP2/wav/");
+  createjs.Sound.registerManifest(notes, "/guitar/wav/");
 
   $(".play").on("click", function(){
     var attribute = "#"+ $(this).attr("compid");

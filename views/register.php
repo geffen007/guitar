@@ -5,13 +5,13 @@ $scriptJS = '';
 $scriptJS2 = '';
 
 
-require_once $_SERVER["DOCUMENT_ROOT"] . '/APP2/partials/headers.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . '/guitar/partials/headers.php';
 ?>
 
 <div class="container login">
   <div class="form">
     <h1>Registrati</h1>
-    <form class="p-4" method="post" action="/APP2/php/register.php">
+    <form class="p-4" method="post" action="/guitar/php/register.php">
       <div class="mb-3">
         <label for="FormEmail" class="form-label">Username</label>
         <input type="text" class="form-control" name="username" id="username" placeholder="Username" minlength="5" maxlength="20" required>
@@ -26,5 +26,5 @@ require_once $_SERVER["DOCUMENT_ROOT"] . '/APP2/partials/headers.php';
 </div>
   
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"] . '/APP2/partials/footer.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . '/guitar/partials/footer.php';
 ?>

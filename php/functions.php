@@ -27,7 +27,6 @@ function mycompositions(){
     $arr =[];
     $user_id = $_SESSION['id'];
     $sql = "SELECT * FROM compositions WHERE user_id = '$user_id'";
-    $sql = "SELECT * FROM compositions";
     $rs = $DB->RawQuery($sql);
         while($t = $DB->FetchObject($rs)){
             // $arr[] = ['nome' => htmlspecialchars($t->nome), 'composizione' => $t->composition];

@@ -5,5 +5,5 @@
 $DBHOST = "localhost";
 $DBUSER = "root";
 $DBPASS = "root";
-$DBNAME = "amodio";
+$DBNAME = "guitar";
 
